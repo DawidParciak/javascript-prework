@@ -48,10 +48,6 @@ if(computerMove == 'kamień' && playerMove == 'papier'){
     printMessage('Wygrywa komputer!');
 } else if (computerMove == 'nożyce' && playerMove == 'nożyce'){
     printMessage('Remis!');
-} else if (computerMove == 'nożyce'  && playerMove == 'nieznany ruch'){
+} else if (playerMove == 'nieznany ruch'){
     printMessage('Nieznany ruch!');
-} else if (computerMove == 'kamień'  && playerMove == 'nieznany ruch'){
-    printMessage('Nieznany ruch!');
-} else if (computerMove == 'papier'  && playerMove == 'nieznany ruch'){
-    printMessage('Nieznany ruch!');
-} 
+}
