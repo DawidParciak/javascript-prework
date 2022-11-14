@@ -1,7 +1,7 @@
 {
-    function playGame(playerInput){
+    const playGame = function(playerInput){
         clearMessages()
-        function getMoveName(argMoveId){
+        const getMoveName = function (argMoveId){
             if(argMoveId == 1){
                 return 'kamień';
             }
@@ -20,8 +20,15 @@
         const randomNumber = Math.floor(Math.random() * 3 + 1);
         const argComputerMove = getMoveName(randomNumber);
         const argPlayerMove = getMoveName(playerInput);
-        
-        function displayResult(argComputerMove, argPlayerMove){
+
+        const displayResult = function(argComputerMove, argPlayerMove){
+            console.log('Wylosowana liczba to: ' + randomNumber);
+            console.log('Gracz wpisał: ' + playerInput);
+            console.log('Moves:', argComputerMove, argPlayerMove);
+
+            printMessage('Mój ruch to: ' + argComputerMove);
+            printMessage('Twój ruch to: ' + argPlayerMove);
+
             if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
                 printMessage('Ty wygrywasz!');
             } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
@@ -44,16 +51,6 @@
                 printMessage('Wpisz liczbę z przedziału 1-3');
             }
         }
-
-        console.log('Wylosowana liczba to: ' + randomNumber);
-
-        printMessage('Mój ruch to: ' + argComputerMove);
-
-        console.log('Gracz wpisał: ' + playerInput);
-
-        printMessage('Twój ruch to: ' + argPlayerMove);
-
-        console.log('Moves:', argComputerMove, argPlayerMove);
 
         displayResult(argComputerMove, argPlayerMove);
     }
